@@ -1,6 +1,6 @@
 import React from "react";
 
-const Login = () => {
+const SignUp = () => {
   return (
     <>
       <div className="flex h-35 justify-between p-3 bg-[#fafbfc]">
@@ -8,15 +8,37 @@ const Login = () => {
           <h6 className="text-sm text-gray-600 cursor-pointer">Gravity</h6>
         </div>
         <div className="flex items-center gap-2	">
-          <h6 className="text-slate-500 text-sm">Dont have an account?</h6>
+          <h6 className="text-slate-500 text-sm">
+            Already Account click here?
+          </h6>
           <button className="bg-[#7b68ee] p-2 rounded-md text-white hover:bg-[#5f48ea]">
-            Sign up
+            login
           </button>
         </div>
       </div>
-      <div className="login-box-style">
-        <h6 className="text-xl font-semibold text-center">Welcome back!</h6>
+      <div className="signup-box-style">
+        <h6 className="text-xl font-semibold text-center">
+          Seconds to sign up!
+        </h6>
         <div className="flex gap-2 flex-col">
+          <div className="flex gap-2 flex-col">
+            <label className="text-xs" htmlFor="">
+              Full Name
+            </label>
+            <input
+              className="border-slate-800 rounded-sm"
+              style={{
+                border: "1px solid #d6d9de",
+                borderRadius: "9px",
+                padding: "0 20px 0 36px",
+                height: "40px",
+                color: "#2a2e34",
+                outline: "none",
+              }}
+              type="text"
+              placeholder="John Doe"
+            />
+          </div>
           <div className="flex gap-2 flex-col">
             <label className="text-xs" htmlFor="">
               Work Email
@@ -52,13 +74,10 @@ const Login = () => {
               type="password"
               placeholder="Enter password"
             />
-            <a href="#" className="text-xs text-[#7b68ee] cursor-pointer w-fit">
-              forget password?
-            </a>
           </div>
         </div>
         <button className="bg-[#7b68ee] p-2 rounded-md text-white w-full hover:bg-[#5f48ea]">
-          Login
+          Sign Up
         </button>
         <h6
           className="text-xs text-[#7b68ee] cursor-pointer"
@@ -66,11 +85,11 @@ const Login = () => {
             margin: "auto",
           }}
         >
-          or login with google
+          or SignUp with google
         </h6>
       </div>
     </>
   );
 };
 
-export default Login;
+export default SignUp;

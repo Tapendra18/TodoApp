@@ -2,4 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #fafbfc;
+}
 
+.login-box-style {
+  width: 480px;
+  background: #fff;
+  box-shadow: 0 24px 64px #26214a1a;
+  border-radius: 12px;
+  padding: 30px 60px;
+  position: relative;
+  margin: auto;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.signup-box-style {
+  width: 480px;
+  background: #fff;
+  box-shadow: 0 24px 64px #26214a1a;
+  border-radius: 12px;
+  padding: 30px 60px;
+  position: relative;
+  margin: auto;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
