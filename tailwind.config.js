@@ -7,7 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-     
+      colors: {
+        'regal-blue': '#7b68ee',
+      },
     },
   },
   plugins: [],
