@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 body {
+  background-color: gray;
+  background-image: -webkit-linear-gradient(top left, #a802e0, #f7676a);
   background-color: #fafbfc;
+  background-repeat: no-repeat;
 }
 
 .login-box-style {
@@ -14,7 +17,7 @@ body {
   padding: 30px 60px;
   position: relative;
   margin: auto;
-  top: 120px;
+  /* top: 120px; */
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -28,7 +31,7 @@ body {
   padding: 30px 60px;
   position: relative;
   margin: auto;
-  top: 80px;
+  /* top: 100px; */
   display: flex;
   flex-direction: column;
   gap: 25px;
