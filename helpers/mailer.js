@@ -17,7 +17,7 @@ export const sendEmail = async ({ email, emailType, userId }) => {
 
         const transporter = nodemailer.createTransport({
             host: "smtp.ethereal.email",
-            port: 465,
+            port: 587,
             secure: true,
             auth: {
                 user: "maddison53@ethereal.email",

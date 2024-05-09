@@ -1,7 +1,35 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 const SignUp = () => {
+  const [inputvalue, setInputValue] = useState({});
+
+  const handleChangeValue = (e) => {
+    const { name, value } = e.target;
+    setInputValue((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmitValue = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://127.0.0.1:3000/api/users/signup", inputvalue, {
+        headers:
+          ("Access-Control-Allow-Origin: *",
+          "Origin, X-Requested-With, Content-Type, Accept"),
+      });
+      // setInputValues({ title: "", description: "" });
+      // fetchTodos();
+    } catch (error) {
+      console.error("Error adding signup:", error);
+    }
+  };
+
   return (
     <>
       <div>
@@ -48,6 +76,8 @@ const SignUp = () => {
                   }}
                   type="text"
                   placeholder="John Doe"
+                  name="username"
+                  onChange={handleChangeValue}
                 />
               </div>
               <div className="flex gap-2 flex-col">
@@ -66,6 +96,8 @@ const SignUp = () => {
                   }}
                   type="text"
                   placeholder="Enter your work email"
+                  name="email"
+                  onChange={handleChangeValue}
                 />
               </div>
               <div className="flex gap-2 flex-col ">
@@ -84,10 +116,16 @@ const SignUp = () => {
                   className="border-slate-800 rounded-sm"
                   type="password"
                   placeholder="Enter password"
+                  name="password"
+                  onChange={handleChangeValue}
                 />
               </div>
             </div>
-            <button className="bg-[#7b68ee] p-2 rounded-md text-white w-full hover:bg-[#5f48ea]">
+            <button
+              className="bg-[#7b68ee] p-2 rounded-md text-white w-full hover:bg-[#5f48ea]"
+              type="submit"
+              onClick={handleSubmitValue}
+            >
               Sign Up
             </button>
             <h6

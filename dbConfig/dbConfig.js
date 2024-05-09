@@ -1,13 +1,10 @@
 import mongoose from "mongoose";
 
-const URI = "mongodb+srv://Tapendra:wo5EsQ4UbVTbHI9G@cluster0.rgm2j1z.mongodb.net/todo";
+const URI = "mongodb+srv://Tapendra:NRDARW4IpU5ZlOVE@cluster0.rgm2j1z.mongodb.net/todo";
 
 export async function connect() {
     try {
-        mongoose.connect(URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        })
+        mongoose.connect(URI)
         const connection = mongoose.connection
         connection.on('connected', () => {
             console.log('Connected Mongo db')
